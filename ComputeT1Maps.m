@@ -31,7 +31,7 @@ function ComputeT1Maps(data, options)
     %   ClearCanvasToT1MatlabBridge.cs in the ClearCanvas.MSU.SeriesSelector
     %   project
     error(nargchk(1, 2, nargin, 'struct'));
-    save(fullfile('F:\MATLAB\T1Mapping', 'T1_debug.mat'), 'data', 'options', ...
+    save(fullfile('D:\MATLAB\T1Mapping', 'T1_debug.mat'), 'data', 'options', ...
         '-mat', '-v7.3');
     
     options = SetDefaultOptions(options);
@@ -221,8 +221,9 @@ function ComputeT1Maps(data, options)
                 
                 disp('Looking for job manager');
                 if(options.UseLocalJobManager)
-                    jobMgr = findResource('scheduler', 'type', 'local');
-                    set(jobMgr, 'ClusterSize', 8);
+%                     jobMgr = findResource('scheduler', 'type', 'local');
+                    jobMgr = parcluster('local');
+%                     set(jobMgr, 'ClusterSize', 8);
                 else
                     jobMgr = findResource('scheduler', 'type', 'jobmanager', ...
                         'name', 'YourJobManager', 'LookupURL', 'yourjobmanagerhostname');
@@ -237,7 +238,9 @@ function ComputeT1Maps(data, options)
                 end
                 
                 disp('Creating a job');
-                job = createJob(jobMgr);
+%                 job = createJob(jobMgr);
+                job = createJob(jobMgr, 'AdditionalPaths', ...
+                    {'D:\MATLAB\T1Mapping'}, 'AttachedFiles', {'GRET1FitFunction.m', 'T1RowFit.m'});
                 disp('Job created');
                 
                 jd.cols = cols;
@@ -257,7 +260,7 @@ function ComputeT1Maps(data, options)
                     set(job, 'Timeout', 200000);
                     set(job, 'RestartWorker', options.ResetWorkersOnCluster);
                 end
-                set(job, 'FileDependencies', {'GRET1FitFunction.m', 'T1RowFit.m'});
+%                 set(job, 'FileDependencies', {'GRET1FitFunction.m', 'T1RowFit.m'});
                 
                 try
                     for m = 1:rows
@@ -281,10 +284,13 @@ function ComputeT1Maps(data, options)
                 disp('Job submitted');
                 
                 disp('Waiting for finish state');
-                waitForState(job, 'finished');
+%                 waitForState(job, 'finished');
+%                 wait(job, 'finished');
+                wait(job);
                 disp('Finished');
                 
-                results = getAllOutputArguments(job);
+%                 results = getAllOutputArguments(job);
+                results = job.fetchOutputs;
                 errmsgs = get(job.Tasks, {'ErrorMessage'});
                 nonempty = ~cellfun(@isempty, errmsgs);
                 celldisp(errmsgs(nonempty));

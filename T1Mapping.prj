@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-project>
+  <configuration target="target.net.component" target-name=".NET Assembly" name="T1Mapping" location="F:\MATLAB\T1Mapping" file="F:\MATLAB\T1Mapping\T1Mapping.prj" preferred-package-type="package.type.exe" build-checksum="3301447717" preferred-package-location="F:\MATLAB">
+    <param.project.name>F:\MATLAB\T1Mapping\T1Mapping.prj</param.project.name>
+    <param.target.type>.NET Assembly</param.target.type>
+    <param.appname>edu.msu.rad.T1Mapping</param.appname>
+    <param.intermediate>${PROJECT_ROOT}\edu.msu.rad.T1Mapping\src</param.intermediate>
+    <param.output>${PROJECT_ROOT}\edu.msu.rad.T1Mapping\distrib</param.output>
+    <param.embed.ctf>true</param.embed.ctf>
+    <param.tbx_on_path>
+      <item>distcomp</item>
+      <item>images</item>
+      <item>optim</item>
+    </param.tbx_on_path>
+    <param.warnings>
+      <warning.fullpath>on</warning.fullpath>
+      <warning.duplicate>on</warning.duplicate>
+      <warning.option.ignored>on</warning.option.ignored>
+      <warning.libname>on</warning.libname>
+      <warning.demo>on</warning.demo>
+    </param.warnings>
+    <param.net.framework>option.net.framework.2.0</param.net.framework>
+    <param.assembly.type>option.assembly.type.private</param.assembly.type>
+    <param.encryption.key.file />
+    <param.net.enable.remoting>false</param.net.enable.remoting>
+    <param.net.tsa.enable>false</param.net.tsa.enable>
+    <param.net.tsa.assembly />
+    <param.net.tsa.interface />
+    <param.net.tsa.namespace>edu.msu.rad.T1Mapping</param.net.tsa.namespace>
+    <param.net.tsa.superclass>MLT1Mapping</param.net.tsa.superclass>
+    <param.net.tsa.metadata />
+    <param.net.tsa.metadata.assembly>F:\MATLAB</param.net.tsa.metadata.assembly>
+    <unset>
+      <param.project.name />
+      <param.target.type />
+      <param.intermediate />
+      <param.output />
+      <param.embed.ctf />
+      <param.warnings />
+      <param.assembly.type />
+      <param.encryption.key.file />
+      <param.net.enable.remoting />
+      <param.net.tsa.enable />
+      <param.net.tsa.assembly />
+      <param.net.tsa.interface />
+      <param.net.tsa.namespace />
+      <param.net.tsa.metadata />
+      <param.net.tsa.metadata.assembly />
+    </unset>
+    <fileset.classes>
+      <entity.package name="">
+        <entity.class name="MLT1Mapping">
+          <file>${PROJECT_ROOT}\CaptureDotNetData.m</file>
+          <file>${PROJECT_ROOT}\ComputeT1Maps.m</file>
+          <file>${PROJECT_ROOT}\ComputeT1NoiseThreshold.m</file>
+          <file>${PROJECT_ROOT}\ContainingInterval.m</file>
+          <file>${PROJECT_ROOT}\DisplayOriginalAndMaskedImages.m</file>
+          <file>${PROJECT_ROOT}\GRET1FitFunction.m</file>
+          <file>${PROJECT_ROOT}\Intervals.m</file>
+          <file>${PROJECT_ROOT}\QT1GetDicomHeader.m</file>
+          <file>${PROJECT_ROOT}\SetDefaultOptions.m</file>
+          <file>${PROJECT_ROOT}\T1RowFit.m</file>
+          <file>${PROJECT_ROOT}\WriteS0MapAsDicom.m</file>
+          <file>${PROJECT_ROOT}\WriteT1MapAsDicom.m</file>
+        </entity.class>
+      </entity.package>
+    </fileset.classes>
+    <fileset.resources />
+    <fileset.package>
+      <file special-file="file.mcr" reference-mode="direct">${MATLAB_ROOT}\toolbox\compiler\deploy\win64\MCRInstaller.exe</file>
+    </fileset.package>
+    <build-deliverables>
+      <file name="readme.txt" location="${PROJECT_ROOT}\edu.msu.rad.T1Mapping\distrib" optional="true">F:\MATLAB\T1Mapping\edu.msu.rad.T1Mapping\distrib\readme.txt</file>
+      <file name="T1Mapping_overview.html" location="${PROJECT_ROOT}\edu.msu.rad.T1Mapping\distrib" optional="false">F:\MATLAB\T1Mapping\edu.msu.rad.T1Mapping\distrib\T1Mapping_overview.html</file>
+      <file name="T1Mapping.dll" location="${PROJECT_ROOT}\edu.msu.rad.T1Mapping\distrib" optional="false">F:\MATLAB\T1Mapping\edu.msu.rad.T1Mapping\distrib\T1Mapping.dll</file>
+      <file name="T1MappingNative.dll" location="${PROJECT_ROOT}\edu.msu.rad.T1Mapping\distrib" optional="false">F:\MATLAB\T1Mapping\edu.msu.rad.T1Mapping\distrib\T1MappingNative.dll</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\MATLAB\R2011b</root>
+      <path>
+        <directory>F:\MATLAB</directory>
+        <directory>F:\MATLAB\utils</directory>
+        <directory>F:\MATLAB\utils\vff</directory>
+        <directory>F:\MATLAB\old stuff\eventanalysis\eventanalysis</directory>
+        <directory>F:\MATLAB\T1Mapping</directory>
+        <directory>F:\MATLAB\AdcMapping</directory>
+        <directory>F:\MATLAB\splinefit</directory>
+        <directory>F:\MATLAB\r2star source code</directory>
+        <directory>F:\MATLAB\r2star source code\DICOMviewer</directory>
+        <directory>F:\MATLAB\r2star source code\MATLAB-Cinterface</directory>
+        <directory>F:\MATLAB\r2star source code\MATLAB-Cinterface\Standalone</directory>
+        <directory>F:\MATLAB\r2star source code\MATLAB-Cinterface\engprog</directory>
+        <directory>F:\MATLAB\r2star source code\MATLAB-Cinterface\mexfiles</directory>
+        <directory>F:\MATLAB\r2star source code\StudySelect</directory>
+        <directory>F:\MATLAB\r2star source code\StudySelect\figure design</directory>
+        <directory>F:\MATLAB\r2star source code\arg_test</directory>
+        <directory>F:\MATLAB\r2star source code\ironovrld</directory>
+        <directory>F:\MATLAB\r2star source code\ironovrld\windowing</directory>
+        <directory>F:\MATLAB\r2star source code\mymextest</directory>
+        <directory>F:\MATLAB\r2star source code\parametric</directory>
+        <directory>F:\MATLAB\r2star source code\registration</directory>
+        <directory>F:\MATLAB\r2star source code\sample_images</directory>
+        <directory>F:\MATLAB\r2star source code\simple_gui</directory>
+        <directory>F:\MATLAB\r2star source code\temporary</directory>
+        <directory>F:\MATLAB\r2star source code\testing</directory>
+        <directory>F:\MATLAB\r2star source code\utilities</directory>
+        <directory>F:\MATLAB\r2star source code\utilities\fromFileExchange</directory>
+        <directory>F:\MATLAB\r2star source code\utilities\junk</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\demos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graph2d</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graph3d</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\plottools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\scribe</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\specgraph</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\uitools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\local</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\ops</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\lang</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\elmat</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\randfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\elfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\specfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\matfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datafun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\polyfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\funfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\sparfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\strfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\iofun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\timefun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datatypes</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\verctrl</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\codetools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\helptools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\winfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\winfun\net</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\hds</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\guide</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datamanager</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\simulink</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\instrument</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\audiovideo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\comparisons</directory>
+        <directory>${MATLAB_ROOT}\toolbox\compiler</directory>
+        <directory>${MATLAB_ROOT}\toolbox\compiler\compilerdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\distcomp</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\user</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\mpi</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\parallel</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\parallel\util</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\lang</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\cluster</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\gpu</directory>
+        <directory>${MATLAB_ROOT}\toolbox\distcomp\pctdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\dotnetbuilder\dotnetbuilder</directory>
+        <directory>${MATLAB_ROOT}\toolbox\dotnetbuilder\dotnetbuilderdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\colorspaces</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\imuitools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\iptformats</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\iptutils</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\imagesci</directory>
+        <directory>${MATLAB_ROOT}\toolbox\images\imdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sam\m3i</directory>
+        <directory>${MATLAB_ROOT}\toolbox\optim\optim</directory>
+        <directory>${MATLAB_ROOT}\toolbox\optim\optimdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\pde</directory>
+        <directory>${MATLAB_ROOT}\toolbox\pde\pdedemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\asynciolib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\dastudio</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\eml\eml</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\filterdesignlib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\imageslib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\optimlib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\rptgen</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\siglib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\spcuilib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\signal\signal</directory>
+        <directory>${MATLAB_ROOT}\toolbox\signal\sigtools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\signal\sptoolgui</directory>
+        <directory>${MATLAB_ROOT}\toolbox\signal\sigdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\timeseries</directory>
+      </path>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
+
